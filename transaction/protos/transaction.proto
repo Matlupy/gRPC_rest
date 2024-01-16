@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.transaction";
+option java_outer_classname = "TransactionProto";
+option objc_class_prefix = "TXN";
+
+package transaction;
+
+service MerchantDetails{
+  rpc GetMerchantName(MerchantId) returns(Merchant) {}
+  rpc GetFullMerchant(MerchantId) returns(FullMerchant) {}
+}
+
+
+message MerchantId{
+  string id = 1;
+}
+
+message Merchant{
+  string id = 1;
+  string name = 2;
+} 
+
+message FullMerchant{
+  string id = 1;
+  string name = 2;
+  string customer_id=3; 
+  float transact_amount=4; 
+  int32 check_fraud=5; 
+  int32 age=6; 
+  string gender=7; 
+  string zipcode_ori=8; 
+  string zipcode_dest=9; 
+  string category=10;
+} 
