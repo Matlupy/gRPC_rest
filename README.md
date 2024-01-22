@@ -12,16 +12,21 @@ A project to test and compare the performance of RESTful against gRPC communicat
 
 - [@Matlupy](https://www.github.com/Matlupy)
 
+## Installation and Setup:
 
-Run the requirements.txt file
+Run the requirements.txt file to install the required libraries and versions using below command:    
 
-# DEPLOYMENT
+```
+pip install -r requirements.txt
+```
+## Deployment:
 
 ## Testing the gRPC service: 
 
-Run the proto file command:
+Run the proto file command in the terminal from the path containing the proto file:
+```
 python -m grpc_tools.protoc -I../../protos --python_out=. --pyi_out=. --grpc_python_out=. ../../protos/transaction.proto
-
+```
 #### To Run the gRPC server
 Run the transaction_server.py file using the command
 
@@ -51,4 +56,5 @@ Navigate to the rest_load_test.py file and execute the command:
 python -m locust -f rest_load_test.py --host=http://localhost:5000
 ```
 
-Navigate to the url generated in the termnal http://localhost:8089
+Navigate to the url generated in the termnal to view the performance test results:  
+http://localhost:8089
