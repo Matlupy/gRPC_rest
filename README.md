@@ -1,25 +1,49 @@
 # grpc_vs_rest
 A project to test and compare the performance of RESTful against gRPC communication protocols in a controlled environment simulating a payments transfer system of a bank.
 
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-
 ## Authors
 
 - [@Matlupy](https://www.github.com/Matlupy)
 
 ## Installation and Setup:
 
-Run the requirements.txt file to install the required libraries and versions using below command:    
+## Clone the Repository:
+Open the command Terminal and change the current working directory to the location where you want the cloned directory.
 
+Type git clone, and then paste the URL from the code option in the repository.
 ```
-pip install -r requirements.txt
+git clone https://github.com/Matlupy/grpc_vs_rest.git
 ```
-## Deployment:
+Install and if necessary upgrade the version of your pip using the below command:
+```
+$ python -m pip install --upgrade pip
+```
+
+## Install gRPC:
+```
+$ python -m pip install grpcio
+```
+Or, to install it system wide:
+```
+$ sudo python -m pip install grpcio
+```
+## gRPC tools
+To install gRPC tools, run:
+```
+$ python -m pip install grpcio-tools
+```
+
+## Install REST API:
+Let's begin byinstalling Flask in a virtual environment. If you don't have virtualenv installed in your system, you can download it from https://pypi.python.org/pypi/virtualenv and install.
+```
+$ pip install virtualenv
+```
+Next is to install flask in the virtual environmen:
+```
+$ virtualenv flask
+$ flask/bin/pip install flask
+```
+# Deployment:
 
 ## Testing the gRPC service: 
 
